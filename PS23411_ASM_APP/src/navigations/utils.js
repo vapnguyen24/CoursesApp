@@ -1,0 +1,15 @@
+export const routes = {
+    singin: 'SIGN_IN',
+    register: 'REGISTER',
+    bottomMenu: 'BOTTOM_MENU',
+    home: 'HOME',
+    explore: 'EXPLORE',
+    profile: 'PROFILE',
+    cart: 'CART',
+    detailProfile: 'DETAIL_PROFILE',
+    detailAsignment: 'DETAIL_ASM',
+    updateProfile: 'UPDATE_PROFILE',
+    myAssignment: 'MY_ASSIGNMENT',
+    searchAssignment: 'SEARCH_ASSIGNMENT',
+    assignmentsByCategory: 'ASSIGNMENTS_BY_CATEGORY',
+}

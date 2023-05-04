@@ -1,0 +1,398 @@
+<link href="/stylesheets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/stylesheets/ruang-admin.min.css" rel="stylesheet">
+
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  {{!-- <link id="pagestyle" href="/stylesheets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" /> --}}
+
+<body id="page-top">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <img src="/images/logo/logo2.png">
+        </div>
+        <div class="sidebar-brand-text mx-3">RuangAdmin</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        Features
+      </div>
+     
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fab fa-fw fa-wpforms"></i>
+          <span>Forms</span>
+        </a>
+        <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Forms</h6>
+            <a class="collapse-item" href="http://localhost:3000/users/add-news">Add new user</a>
+            <a class="collapse-item" href="http://localhost:3000/products/add-new">Add new assignment</a>
+            
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span>
+        </a>
+        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Tables</h6>
+            <a class="collapse-item" href="http://localhost:3000/users/user-list">Users</a>
+            <a class="collapse-item" href="http://localhost:3000/products/assignments-list">Assignments</a>
+          </div>
+        </div>
+      </li>
+     
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bell fa-fw"></i>
+                <span class="badge badge-danger badge-counter">3+</span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
+                <h6 class="dropdown-header">
+                  Alerts Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-primary">
+                      <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 12, 2019</div>
+                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-success">
+                      <i class="fas fa-donate text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 7, 2019</div>
+                    $290.29 has been deposited into your account!
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="mr-3">
+                    <div class="icon-circle bg-warning">
+                      <i class="fas fa-exclamation-triangle text-white"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="small text-gray-500">December 2, 2019</div>
+                    Spending Alert: We've noticed unusually high spending for your account.
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-envelope fa-fw"></i>
+                <span class="badge badge-warning badge-counter">2</span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Message Center
+                </h6>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="img/man.png" style="max-width: 60px" alt="">
+                    <div class="status-indicator bg-success"></div>
+                  </div>
+                  <div class="font-weight-bold">
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
+                      having.</div>
+                    <div class="small text-gray-500">Udin Cilok · 58m</div>
+                  </div>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <div class="dropdown-list-image mr-3">
+                    <img class="rounded-circle" src="img/girl.png" style="max-width: 60px" alt="">
+                    <div class="status-indicator bg-default"></div>
+                  </div>
+                  <div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people
+                      say this to all dogs, even if they aren't good...</div>
+                    <div class="small text-gray-500">Jaenab · 2w</div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-tasks fa-fw"></i>
+                <span class="badge badge-success badge-counter">3</span>
+              </a>
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
+                <h6 class="dropdown-header">
+                  Task
+                </h6>
+                <a class="dropdown-item align-items-center" href="#">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Design Button
+                      <div class="small float-right"><b>50%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item align-items-center" href="#">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Make Beautiful Transitions
+                      <div class="small float-right"><b>30%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item align-items-center" href="#">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Create Pie Chart
+                      <div class="small float-right"><b>75%</b></div>
+                    </div>
+                    <div class="progress" style="height: 12px;">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </a>
+                <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
+              </div>
+            </li>
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" src="/images//boy.png" style="max-width: 60px">
+                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Profile
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Settings
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Activity Log
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+        <!-- Container Fluid-->
+
+         <div class="container-fluid my-3">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header pb-0">
+              <div class="d-flex align-items-center justify-content-between">
+                <p class="mb-0">Edit Profile</p>
+                <button class="btn btn-primary btn-sm ms-auto">Settings</button>
+              </div>
+            </div>
+            <div class="card-body">
+                
+                <!-- avatar -->
+                <input type="file" name="photo" id="upload-photo"  style="opacity: 0; position: absolute; z-index: -1;"/>
+                <div class="container-fluid justify-content-center d-flex mb-4">
+                  <label for="upload-photo">
+
+                    <div class="rounded-circle position-relative" style="width: 150px; height: 150px; background-color: rgba(0,0,255,.1); cursor: pointer;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/147/147140.png" class="w-100 h-100" alt="">
+                        <div style="bottom: 0px; right: 16px ;" class="position-absolute bottom-0 end-6 rounded-circle d-flex justify-content-center align-items-center bg-secondary" style="width: 36px; height: 36px;">
+                            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-camera-512.png" style="width: 24px; height: 24px;" alt="">
+                        </div>
+                    </div>
+                  </label>
+                </div>
+                
+
+                <!-- end avatar -->
+              <p class="text-uppercase text-sm">User Information</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="example-text-input" class="form-control-label">Username</label>
+                    <input class="form-control" disabled type="text" value="{{user.name}}">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="example-text-input" class="form-control-label">Email address</label>
+                    <input class="form-control" disabled type="email" value="{{user.email}}">
+                  </div>
+                </div>
+             
+              </div>
+              <hr class="horizontal dark">
+              <p class="text-uppercase text-sm">Contact Information</p>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="example-text-input" class="form-control-label">Address</label>
+                    <input class="form-control" disabled type="text" value="{{user.address}}">
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="example-text-input" class="form-control-label">Phone number</label>
+                    <input class="form-control" disabled type="text" value="{{user.phone}}">
+                  </div>
+                </div>
+              </div>
+              
+              <hr class="horizontal dark">
+              <p class="text-uppercase text-sm">Assignments</p>
+              <div class="table-responsive">
+                  <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Language</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {{#each myAssignments}}
+                      <tr>
+                        <td style="vertical-align: middle;"><img src="{{this.image}}" style="width: 100px; height: 70px; object-fit: cover;" class="rounded"/></td>
+                        <td style="vertical-align: middle;">{{this.name}}</td>
+                        <td style="vertical-align: middle;">{{this.category}}</td>
+                        <td style="vertical-align: middle;">{{this.price}}</td>
+                        <td style="vertical-align: middle;"><a href="/users/{{this._id}}/details" class="btn btn-sm btn-primary">Detail</a></td>
+                      </tr>
+
+                      {{/each}}
+
+                    </tbody>
+                  </table>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!---Container Fluid-->
+      </div>
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
+              <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer -->
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+    <script src="/javascripts/jquery.min.js"></script>
+  <script src="/javascripts/bootstrap.bundle.min.js"></script>
+  <script src="/javascripts/jquery.easing.min.js"></script>
+  <script src="/javascripts/ruang-admin.min.js"></script>
+  <script src="/javascripts/Chart.min.js"></script>
+  <script src="/javascripts/chart-area-demo.js"></script> 
+
+
+
+  <!--   Core JS Files   -->
+  <script src="/javascripts/core/popper.min.js"></script>
+  <script src="/javascripts/core/bootstrap.min.js"></script>
+  <script src="/javascripts/plugins/perfect-scrollbar.min.js"></script>
+  <script src="/javascripts/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/javascripts/argon-dashboard.min.js?v=2.0.4"></script>
+</body>
